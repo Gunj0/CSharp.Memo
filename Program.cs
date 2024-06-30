@@ -1,7 +1,7 @@
 ﻿using CSharp.Memo.Sample;
 
 // 入力チェック
-CheckSample.Check();
+InputCheckSample.InputCheck();
 
 // ファイル入出力
 FileIOSample.FileIO();

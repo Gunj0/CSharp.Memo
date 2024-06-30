@@ -1,20 +1,96 @@
-﻿using System.Text;
+﻿using System.ComponentModel;
+using System.Text;
 
 namespace CSharp.Memo.Sample
 {
-  /// <summary>
-  /// ファイル入出力
-  /// </summary>
   internal static class FileIOSample
   {
+    /// <summary>
+    /// ファイル入出力
+    /// </summary>
     internal static void FileIO()
     {
-      using var sw = new StreamWriter(
-        @"C:\Users\gunjo\VS\test.txt",
-        false,      // trueは追記、falseは上書き
-        Encoding.GetEncoding("utf-8")
+      Console.WriteLine("～～FileIOSample～～");
+      // .NETではShift-JISが標準で登録されていないので登録する
+      Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
+
+      // ファイル出力
+      var outputFilePath = @"IOSample.txt"; 
+      using (var sw = new StreamWriter(
+        outputFilePath, // 絶対パスでも相対パスでも可
+        true,           // trueは追記、falseは上書き
+        Encoding.GetEncoding("shift_jis")
+        ))
+      {
+        sw.Write(DateTime.Now);
+        sw.Write(",");
+        sw.Write("晴れ");
+        sw.WriteLine();
+      }
+      Console.WriteLine($"{outputFilePath}: ファイル出力完了");
+
+      // ファイル読み込み
+      var inputFilePath = @"IOSample.txt";
+      // 存在チェック
+      if (!File.Exists(inputFilePath)) return;
+      // 一行ずつ読み込み
+      string[] lines = File.ReadAllLines(
+        inputFilePath, // 絶対パスでも相対パスでも可
+        Encoding.GetEncoding("shift_jis")
         );
-      sw.WriteLine(DateTime.Now);
+      // BindingListは、DataGridViewをリアルタイム更新できるList
+      var _dtos = new BindingList<OutputFileDto>();
+      foreach (var line in lines)
+      {
+        string[] row = line.Split(',');
+        var dto = new OutputFileDto(
+          DateTime.Parse(row[0]),
+          row[1]
+          );
+        _dtos.Add(dto);
+      }
+      foreach (var dto in _dtos)
+      {
+        Console.WriteLine($"{dto.Id}: {dto.Time}: {dto.Weather}");
+      }
+
+
+
+
+      Console.WriteLine("");
     }
+  }
+
+  /// <summary>
+  /// DTOサンプル（実際はクラスごとにファイルを分ける）
+  /// sealedは継承できないようにする
+  /// </summary>
+  internal sealed class OutputFileDto
+  {
+    public OutputFileDto(DateTime _time, string _weather)
+    {
+      Id = _id;
+      Time = _time;
+      Weather = _weather;
+      // インスタンス生成の度にIDをインクリメント
+      _id++;
+    }
+
+    private static int _id = 0;
+
+    /// <summary>
+    /// ID
+    /// </summary>
+    internal int Id { get; } = 0;
+
+    /// <summary>
+    /// 日時
+    /// </summary>
+    internal DateTime Time { get; } = new DateTime();
+
+    /// <summary>
+    /// 日時
+    /// </summary>
+    internal string Weather { get; } = "";
   }
 }
