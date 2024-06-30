@@ -6,9 +6,11 @@ InputCheckSample.InputCheck();
 // ファイル入出力
 FileIOSample.FileIO();
 
+// 型変換
+ConvertSample.Converts();
 
-
-
+// コレクション
+CollectionSample.Collections();
 
 
 
