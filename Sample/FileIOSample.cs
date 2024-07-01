@@ -15,7 +15,7 @@ namespace CSharp.Memo.Sample
       Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
 
       // ファイル出力
-      var outputFilePath = @"IOSample.txt"; 
+      var outputFilePath = @"IOSample.txt";
       using (var sw = new StreamWriter(
         outputFilePath, // 絶対パスでも相対パスでも可
         true,           // trueは追記、falseは上書き
@@ -67,11 +67,12 @@ namespace CSharp.Memo.Sample
   /// </summary>
   internal sealed class OutputFileDto
   {
-    public OutputFileDto(DateTime _time, string _weather)
+    // コンストラクタ
+    public OutputFileDto(DateTime time, string weather)
     {
       Id = _id;
-      Time = _time;
-      Weather = _weather;
+      Time = time;
+      Weather = weather;
       // インスタンス生成の度にIDをインクリメント
       _id++;
     }
@@ -81,7 +82,7 @@ namespace CSharp.Memo.Sample
     /// <summary>
     /// ID
     /// </summary>
-    internal int Id { get; } = 0;
+    internal int Id { get; }
 
     /// <summary>
     /// 日時
