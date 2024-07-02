@@ -1,4 +1,4 @@
-﻿namespace CSharp.Memo.Sample
+﻿namespace CSharp.Memo.BasicSample
 {
   internal static class InputCheckSample
   {

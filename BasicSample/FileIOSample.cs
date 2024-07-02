@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Text;
 
-namespace CSharp.Memo.Sample
+namespace CSharp.Memo.BasicSample
 {
   internal static class FileIOSample
   {

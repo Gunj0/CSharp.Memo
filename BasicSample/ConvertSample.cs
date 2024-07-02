@@ -1,4 +1,4 @@
-﻿namespace CSharp.Memo.Sample
+﻿namespace CSharp.Memo.BasicSample
 {
   /// <summary>
   /// 型変換
