@@ -5,7 +5,7 @@ using CSharp.Memo.BasicSample;
 // 文字チェック
 InputCheckSample.InputCheck();
 // ファイル入出力
-FileIOSample.FileIO();
+//FileIOSample.FileIO();
 // 型変換
 ConvertSample.Converts();
 // コレクション
@@ -33,10 +33,7 @@ foreach (var item in list)
 // 抽象クラス
 new AbstractSample().Save();
 // 例外処理
-
-
-
-
+new ExceptionSample();
 
 
 
