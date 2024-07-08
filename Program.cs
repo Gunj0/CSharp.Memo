@@ -1,5 +1,6 @@
 ﻿using CSharp.Memo.AdvancedSample;
 using CSharp.Memo.BasicSample;
+using CSharp.Memo.LambdaSample;
 
 /* BasicSample */
 // 文字チェック
@@ -33,7 +34,24 @@ foreach (var item in list)
 // 抽象クラス
 new AbstractSample().Save();
 // 例外処理
-new ExceptionSample();
+//new ExceptionSample();
+
+/* ラムダ式 */
+// Delegate
+new DelegateSample().Delegates();
+// 匿名メソッド
+new AnonymousMethodSample().AnonymousMethod();
+// Predicate
+new PredicateSample().Predicates();
+// ラムダ式
+new LambdaSample().Lambdas();
+// Func, Action
+new FuncActionSample().FuncActions();
+
+
+
+
+
 
 
 
