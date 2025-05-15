@@ -1,1 +1,3 @@
-﻿System.Console.WriteLine("Hello, World!");
+﻿using L10_Basic.Section;
+
+S01_基本型.Run();

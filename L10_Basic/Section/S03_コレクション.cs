@@ -1,4 +1,4 @@
-﻿namespace CSharp.Memo.BasicSample
+namespace CSharp.Memo.BasicSample
 {
   internal static class CollectionSample
   {

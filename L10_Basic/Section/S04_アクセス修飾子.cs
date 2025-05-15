@@ -21,3 +21,12 @@ namespace CSharp.Memo.BasicSample
     private double Temperature { get; set; }
   }
 }
+
+// ■ アクセス修飾子
+// ・public:どこからでもアクセス可
+// ・protected internal:派生クラスと同じアセンブリ内のみ
+// ・protected:同じクラスと派生クラス内のみ
+// ーーーーーーーーー ↑ 公開、↓ 非公開ーーーーーーーーー
+// ・internal:同じプロジェクト(アセンブリ)内のみ
+// ・private protected:同じアセンブリ内の派生クラス内のみ
+// ・private:同じクラス内のみ
