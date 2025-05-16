@@ -1,0 +1,31 @@
+﻿namespace L10_Basic.Section;
+
+internal static class S10_型変換
+{
+  internal static void Run()
+  {
+    Console.WriteLine("\n～～L10-S10 型変換～～");
+
+    // 型キャスト
+    double d = 1.2;
+    int i = (int)d;
+    Console.WriteLine($"キャスト: {i}");
+
+    // Parse(エラーは例外で捕捉する)
+    string s1 = "1";
+    int i1 = int.Parse(s1);
+    Console.WriteLine($"Parse: {i1}");
+
+    // TryPase(エラーはboolで捕捉する)
+    string s2 = "2";
+    if (int.TryParse(s2, out int i2))
+    {
+      Console.WriteLine($"TryParse: {i2}");
+    }
+
+    // convert(エラーは例外で捕捉する)
+    string s3 = "3";
+    int i3 = Convert.ToInt32(s3);
+    Console.WriteLine($"Convert: {i3}");
+  }
+}
