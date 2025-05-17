@@ -3,17 +3,26 @@ using System.Text;
 
 namespace L10_Basic.Section;
 
-internal static class S05_入出力
+internal static class S60_入出力
 {
   internal static void Run()
   {
-    Console.WriteLine("～～L10-S05 入出力～～");
+    Console.WriteLine("\n～～入出力～～");
 
-    // .NETではShift-JISが標準で登録されていないので登録する
-    Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
+    // コンソール入力
+    Console.Write("名前を入力してください: ");
+    // var inputName = Console.ReadLine();
+
+    // コンソール出力
+    Console.WriteLine($"Console.ReadLine, Console.WriteLine");
+    // コンソール出力（埋め込み）
+    var name = "Taro";
+    Console.WriteLine("Hello World {0}", name);
 
     // ファイル出力
     var outputFilePath = @"IOSample.txt";
+    // .NETではShift-JISが標準で登録されていないので登録する
+    Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
     using (var sw = new StreamWriter(
       outputFilePath, // 絶対パスでも相対パスでも可
       true,           // trueは追記、falseは上書き
@@ -51,21 +60,11 @@ internal static class S05_入出力
     {
       Console.WriteLine($"{dto.Id}: {dto.Time}: {dto.Weather}");
     }
-
-
-
-
-    Console.WriteLine("");
   }
 }
 
-/// <summary>
-/// DTOサンプル（実際はクラスごとにファイルを分ける）
-/// sealedは継承できないようにする
-/// </summary>
 internal sealed class OutputFileDto
 {
-  // コンストラクタ
   public OutputFileDto(DateTime time, string weather)
   {
     Id = _id;
@@ -77,19 +76,7 @@ internal sealed class OutputFileDto
 
   private static int _id = 0;
 
-  /// <summary>
-  /// ID
-  /// </summary>
   internal int Id { get; }
-
-  /// <summary>
-  /// 日時
-  /// </summary>
   internal DateTime Time { get; } = new DateTime();
-
-  /// <summary>
-  /// 日時
-  /// </summary>
   internal string Weather { get; } = "";
 }
-

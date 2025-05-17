@@ -1,27 +1,22 @@
-using System.Diagnostics;
+namespace L10_Basic.Section;
 
-namespace CSharp.Memo._10_CSharpNote
+internal static class S90_デバッグ
 {
-  internal class _40_デバッグ
+  internal static void Run()
   {
-    // DEBUGのときだけ実行
+    Console.WriteLine("～～デバッグ～～");
+
+    // 条件付きコンパイル
+    // DEBUGが定義されているときだけ実行
 #if DEBUG
-    int hoge = 10;
+    int i = 1;
+    Console.WriteLine($"#if DEBUG: {i}");
 #endif
 
-    // DEBUG以外のときだけ実行
+    // DEBUGが定義されていないときだけ実行
 #if !DEBUG
-    int hoge = 10;
+    int j = 2;
+    Console.WriteLine($"#if !DEBUG: {j}");
 #endif
-
-    // 自動ウィンドウ: 実行している近くの変数が見れる
-    // ローカルウィンドウ: 現在のメソッド内の引数や変数が見れる
-    // ウォッチウィンドウ: 固定して変数を見れる
-
-    public int Get()
-    {
-      Debug.WriteLine("");
-      return 0;
-    }
   }
 }

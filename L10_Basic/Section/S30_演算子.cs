@@ -1,10 +1,10 @@
 namespace L10_Basic.Section;
 
-internal static class S15_演算子
+internal static class S30_演算子
 {
   internal static void Run()
   {
-    Console.WriteLine("\n～～L10-S15 演算子～～");
+    Console.WriteLine("\n～～演算子～～");
 
     // 算術演算子
     var a = 10 + 5; // 足し算

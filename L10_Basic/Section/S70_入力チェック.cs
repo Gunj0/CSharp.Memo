@@ -1,29 +1,23 @@
-﻿namespace CSharp.Memo.BasicSample
+﻿namespace L10_Basic.Section;
+
+internal static class S70_入力チェック
 {
-  internal static class InputCheckSample
+  internal static void Run()
   {
-    /// <summary>
-    /// 入力チェック
-    /// </summary>
-    internal static void InputCheck()
+    Console.WriteLine("\n～～入力チェック～～");
+
+    // 含むかチェック
+    var containCheck = "containCheck";
+    if (containCheck.Contains('e'))
     {
-      Console.WriteLine("～～InputCheckSample～～");
+      Console.WriteLine($"Contains: {containCheck}");
+    }
 
-      // 含むかチェック
-      var containCheck = "containCheck";
-      if (containCheck.Contains('e'))
-      {
-        Console.WriteLine($"{containCheck}: eが入ってる！");
-      }
-
-      // 空白チェック
-      var blankCheck = " ";
-      if (blankCheck.Trim().Length < 1)
-      {
-        Console.WriteLine($"{blankCheck}: 何も入ってない！");
-      }
-
-      Console.WriteLine("");
+    // 空白チェック
+    var blankCheck = " ";
+    if (blankCheck.Trim().Length < 1)
+    {
+      Console.WriteLine($"空白チェック: {blankCheck}");
     }
   }
 }

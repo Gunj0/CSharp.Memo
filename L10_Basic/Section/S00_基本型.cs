@@ -4,7 +4,7 @@ internal static class S00_基本型
 {
   internal static void Run()
   {
-    Console.WriteLine("\n～～L10-S00 基本型～～");
+    Console.WriteLine("\n～～基本型～～");
 
     // 整数型
     int i1 = 1;
@@ -22,13 +22,15 @@ internal static class S00_基本型
     double d2 = 1_000.2;
     // 指数
     double d3 = 1.0e-6;
+    Console.WriteLine($"浮動小数点型:{d1}, アンダースコアあり:{d2}, 指数:{d3}");
 
     // 高精度
     decimal d4 = 2.3m;
-    Console.WriteLine($"浮動小数型:{d1}, アンダースコア:{d2}, 指数:{d3}, 高精度:{d4}");
+    Console.WriteLine($"高精度:{d4}");
 
     // 文字型(シングルクォーテーション)
     char c = 'A';
+    Console.WriteLine($"文字型:{c}");
 
     // 文字列型(ダブルクォーテーション)
     string s1 = "Taro";
@@ -36,8 +38,8 @@ internal static class S00_基本型
     string s2 = @"Hello
 World";
     // エスケープ
-    string s4 = $"Hello \"HERE\" ";
-    Console.WriteLine($"文字型:{c}, 文字列型:{s1}, 逐語的文字列:{s2}, 文字列補間:{s3}, エスケープ:{s4}");
+    string s3 = $"Hello \"HERE\" ";
+    Console.WriteLine($"文字列型:{s1}, 逐語的文字列:{s2}, エスケープ:{s3}");
 
     // 論理型
     bool b = true;

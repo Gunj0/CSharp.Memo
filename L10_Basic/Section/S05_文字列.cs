@@ -1,10 +1,10 @@
 namespace L10_Basic.Section;
 
-internal static class S20_文字列の連結
+internal static class S05_文字列
 {
   internal static void Run()
   {
-    Console.WriteLine("\n～～L10-S20 文字列の連結～～");
+    Console.WriteLine("\n～～文字列～～");
 
     // 文字列の連結
     var s1 = "Hello";
@@ -19,5 +19,9 @@ internal static class S20_文字列の連結
     // 挿入文字列
     string s5 = $"Hello {s2}";
     Console.WriteLine($"挿入文字列: {s5}");
+
+    // 文字列長さ
+    var length = "Hello".Length;
+    Console.WriteLine($"文字列長さ: {length}");
   }
 }

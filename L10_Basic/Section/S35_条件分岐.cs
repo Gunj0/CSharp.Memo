@@ -1,10 +1,10 @@
 namespace L10_Basic.Section;
 
-internal static class S25_条件分岐
+internal static class S35_条件分岐
 {
   internal static void Run()
   {
-    Console.WriteLine("\n～～L10-S25 条件分岐～～");
+    Console.WriteLine("\n～～条件分岐～～");
 
     // if文
     var num = 10;
@@ -24,14 +24,14 @@ internal static class S25_条件分岐
     // switch文
     switch (num)
     {
-      case > 0:
-        Console.WriteLine($"switch: {num}は正の数です");
+      case 1:
+        Console.WriteLine($"switch: {num}は1です");
         break;
-      case < 0:
-        Console.WriteLine($"switch: {num}は負の数です");
+      case 2:
+        Console.WriteLine($"switch: {num}は2です");
         break;
       default:
-        Console.WriteLine($"switch: {num}はゼロです");
+        Console.WriteLine($"switch: {num}は1でも2でもありません");
         break;
     }
   }
