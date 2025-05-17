@@ -1,6 +1,6 @@
 ﻿using L10_Basic.Section;
 
-Console.WriteLine("～～Basic～～");
+Console.WriteLine("～～〜〜Basic〜〜～～");
 
 S00_基本型.Run();
 S05_文字列.Run();
@@ -15,6 +15,3 @@ new S50_アクセス修飾子().Run();
 S60_入出力.Run();
 S70_入力チェック.Run();
 S80_例外処理.Run();
-S90_デバッグ.Run();
-
-Console.WriteLine("");
