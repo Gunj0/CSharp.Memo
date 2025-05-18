@@ -1,0 +1,31 @@
+// MSBuild等の外部ツールを実行するための設定ファイル
+// https://code.visualstudio.com/docs/debugtest/tasks
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build_L10_Basic",
+      "command": "dotnet",
+      "type": "process",
+      "args": [
+        "build",
+        "${workspaceFolder}/L10_Basic/L10_Basic.csproj",
+        "/property:GenerateFullPaths=true",
+        "/consoleloggerparameters:NoSummary"
+      ],
+      "problemMatcher": ["$msCompile"]
+    },
+    {
+      "label": "build_L20_Classes",
+      "command": "dotnet",
+      "type": "process",
+      "args": [
+        "build",
+        "${workspaceFolder}/L20_Classes/L20_Classes.csproj",
+        "/property:GenerateFullPaths=true",
+        "/consoleloggerparameters:NoSummary"
+      ],
+      "problemMatcher": ["$msCompile"]
+    }
+  ]
+}

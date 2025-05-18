@@ -1,0 +1,30 @@
+// VSCodeのデバッグサイドバーで「構成の追加」で自動生成
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      // .NET: 実行可能ファイルの起動（コンソール）
+      "name": "CSharp.Memo.L10_Basic",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build_L10_Basic",
+      "program": "${workspaceFolder}/L10_Basic/bin/Debug/net9.0/L10_Basic.dll",
+      "args": [],
+      "cwd": "${workspaceFolder}/L10_Basic",
+      "stopAtEntry": false,
+      "console": "internalConsole"
+    },
+    {
+      // .NET: 実行可能ファイルの起動（コンソール）
+      "name": "CSharp.Memo.L20_Classes",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build_L20_Classes",
+      "program": "${workspaceFolder}/L20_Classes/bin/Debug/net9.0/L20_Classes.dll",
+      "args": [],
+      "cwd": "${workspaceFolder}/L20_Classes",
+      "stopAtEntry": false,
+      "console": "internalConsole"
+    }
+  ]
+}

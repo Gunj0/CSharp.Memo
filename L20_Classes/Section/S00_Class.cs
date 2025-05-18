@@ -1,4 +1,4 @@
-namespace L10_Basic.Section;
+namespace L20_Classes.Section;
 
 internal class S00_Class
 {
