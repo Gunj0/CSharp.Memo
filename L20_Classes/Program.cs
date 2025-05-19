@@ -2,4 +2,4 @@
 
 Console.WriteLine("～～〜〜Classes〜〜～～");
 
-S00_Class.Run();
+new S00_Class().Run();

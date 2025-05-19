@@ -1,6 +1,6 @@
 ﻿namespace L10_Basic.Section;
 
-internal static class S70_入力チェック
+internal static class S75_入力チェック
 {
   internal static void Run()
   {

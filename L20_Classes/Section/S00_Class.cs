@@ -2,14 +2,32 @@ namespace L20_Classes.Section;
 
 internal class S00_Class
 {
-  // プロパティ
-  public string Name { get; set; }
-
-  // メソッド
-  internal static void Run()
+  internal void Run()
   {
     Console.WriteLine("\n～～Class～～");
 
-    Console.WriteLine($"{nameof(S00_Class)}.Run()");
+    // クラス
+    var book = new Book();
+    book.Title = "C#入門";
+    Console.WriteLine($"プロパティ: {book.Title}");
+    book.Show();
+  }
+}
+
+internal class Book
+{
+  // プロパティ
+  public string Title { get; set; } = "タイトル未設定";
+
+  // メソッド
+  public void Show()
+  {
+    Console.WriteLine($"メソッド: {Title}");
+  }
+
+  // オーバーロード
+  public void Show(string title)
+  {
+    Console.WriteLine($"メソッド: {title}");
   }
 }

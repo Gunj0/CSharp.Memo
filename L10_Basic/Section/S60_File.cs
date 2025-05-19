@@ -3,21 +3,11 @@ using System.Text;
 
 namespace L10_Basic.Section;
 
-internal static class S60_入出力
+internal static class S60_File
 {
   internal static void Run()
   {
-    Console.WriteLine("\n～～入出力～～");
-
-    // コンソール入力
-    Console.Write("名前を入力してください: ");
-    // var inputName = Console.ReadLine();
-
-    // コンソール出力
-    Console.WriteLine($"Console.ReadLine, Console.WriteLine");
-    // コンソール出力（埋め込み）
-    var name = "Taro";
-    Console.WriteLine("Hello World {0}", name);
+    Console.WriteLine("\n～～File～～");
 
     // ファイル出力
     var outputFilePath = @"IOSample.txt";
@@ -40,6 +30,7 @@ internal static class S60_入出力
     var inputFilePath = @"IOSample.txt";
     // 存在チェック
     if (!File.Exists(inputFilePath)) return;
+
     // 一行ずつ読み込み
     string[] lines = File.ReadAllLines(
       inputFilePath, // 絶対パスでも相対パスでも可
