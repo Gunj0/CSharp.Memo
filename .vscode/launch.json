@@ -15,7 +15,6 @@
       "console": "internalConsole"
     },
     {
-      // .NET: 実行可能ファイルの起動（コンソール）
       "name": "CSharp.Memo.L20_Classes",
       "type": "coreclr",
       "request": "launch",
@@ -23,6 +22,17 @@
       "program": "${workspaceFolder}/L20_Classes/bin/Debug/net9.0/L20_Classes.dll",
       "args": [],
       "cwd": "${workspaceFolder}/L20_Classes",
+      "stopAtEntry": false,
+      "console": "internalConsole"
+    },
+    {
+      "name": "CSharp.Memo.L30_Lambda",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build_L30_Lambda",
+      "program": "${workspaceFolder}/L30_Lambda/bin/Debug/net9.0/L30_Lambda.dll",
+      "args": [],
+      "cwd": "${workspaceFolder}/L30_Lambda",
       "stopAtEntry": false,
       "console": "internalConsole"
     }

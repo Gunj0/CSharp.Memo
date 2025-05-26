@@ -25,23 +25,23 @@ internal static class S15_コレクション
     // List
     var list = new List<int> { 3, 4 };
     Console.WriteLine($"List: {list[0]}");
-    // Listの長さ
+    // Count
     Console.WriteLine($"Count: {list.Count}");
-    // Listに追加
+    // Add
     list.Add(5);
-    // Listに追加(複数)
+    // AddRange: 複数要素を追加
     list.AddRange([6, 7]);
-    // Listから削除(値指定)
+    // Remove: 指定要素を削除
     list.Remove(3);
-    // Listから削除(インデックス指定)
+    // RemoveAt: 指定インデックスの要素を削除
     list.RemoveAt(0);
-    // Listから削除(複数)
+    // RemoveAll: 条件に合致する要素を削除
     list.RemoveAll(x => x > 5);
-    // Listのインデックス取得
+    // IndexOf: インデックス取得
     var index = list.IndexOf(4);
-    // Listのインデックス取得(複数)
+    // FindAll: 条件に合致する要素を取得
     var indexes = list.FindAll(x => x > 4);
-    // 全て削除
+    // Clear: 全て削除
     list.Clear();
 
     // foreach

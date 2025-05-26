@@ -11,18 +11,13 @@ internal static class S60_File
 
     // ファイル出力
     var outputFilePath = @"IOSample.txt";
-    // .NETではShift-JISが標準で登録されていないので登録する
-    Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
     using (var sw = new StreamWriter(
       outputFilePath, // 絶対パスでも相対パスでも可
       true,           // trueは追記、falseは上書き
-      Encoding.GetEncoding("shift_jis")
+      Encoding.GetEncoding("UTF-8")
       ))
     {
-      sw.Write(DateTime.Now);
-      sw.Write(",");
-      sw.Write("晴れ");
-      sw.WriteLine();
+      sw.WriteLine($"{DateTime.Now},晴れ");
     }
     Console.WriteLine($"{outputFilePath}: ファイル出力完了");
 
@@ -34,7 +29,7 @@ internal static class S60_File
     // 一行ずつ読み込み
     string[] lines = File.ReadAllLines(
       inputFilePath, // 絶対パスでも相対パスでも可
-      Encoding.GetEncoding("shift_jis")
+      Encoding.GetEncoding("UTF-8")
       );
     // BindingListは、DataGridViewをリアルタイム更新できるList
     var _dtos = new BindingList<OutputFileDto>();

@@ -7,9 +7,9 @@ internal class S05_コンストラクタ
     Console.WriteLine("\n～～コンストラクタ～～");
 
     // コンストラクタ
-    var constructorSample1 = new ConstructorSample(1);
-    var constructorSample2 = new ConstructorSample("2");
-    var constructorSample3 = new ConstructorSample();
+    new ConstructorSample(1);
+    new ConstructorSample("2");
+    new ConstructorSample();
   }
 }
 
