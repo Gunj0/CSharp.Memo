@@ -7,18 +7,23 @@ internal class S30_継承
     Console.WriteLine("\n～～継承～～");
 
     // 基底クラス
-    var parent = new ParentClass();
+    var parent = new SuperClass();
     parent.Method1();
 
-    // サブクラス
-    var child = new ChildClass();
+    // 派生クラス
+    var child = new SubClass();
     child.Method1();
   }
 }
 
-// 基底クラス, スーパークラス
-internal class ParentClass
+// 基底クラス
+internal class SuperClass
 {
+  // コンストラクタ
+  public SuperClass()
+  {
+  }
+
   // 仮想メソッド
   public virtual void Method1()
   {
@@ -26,9 +31,14 @@ internal class ParentClass
   }
 }
 
-// 派生クラス, サブクラス
-internal class ChildClass : ParentClass
+// 派生クラス
+internal class SubClass : SuperClass
 {
+  // コンストラクタ
+  public SubClass() : base()
+  {
+  }
+
   // オーバーライド
   public override void Method1()
   {
