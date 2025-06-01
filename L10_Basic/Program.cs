@@ -17,5 +17,5 @@ S60_File.Run();
 S65_Math.Run();
 S70_DateTime.Run();
 S75_入力チェック.Run();
-S80_例外処理.Run();
-S85_null.Run();
+S80_Nullチェック.Run();
+S85_例外処理.Run();

@@ -1,6 +1,6 @@
 namespace L10_Basic.Section;
 
-internal static class S80_例外処理
+internal static class S85_例外処理
 {
   internal static void Run()
   {
@@ -11,7 +11,9 @@ internal static class S80_例外処理
     {
       var num = 10;
       var result = num / 0; // ゼロ除算
-      Console.WriteLine($"result: {result}");
+
+      // 自分で例外を発生させる
+      throw new ArgumentException("カスタム例外メッセージ");
     }
     catch (DivideByZeroException ex)
     {

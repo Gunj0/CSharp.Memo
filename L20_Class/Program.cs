@@ -12,3 +12,4 @@ new S30_継承().Run();
 new S35_抽象クラス().Run();
 new S40_インターフェース().Run();
 new S45_ポリモーフィズム().Run();
+new S50_Dispose().Run();

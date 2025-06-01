@@ -18,7 +18,7 @@ internal static class S10_型変換
 
     // TryPase
     string s2 = "2";
-    if (int.TryParse(s2, out int i2))
+    if (int.TryParse(s2, out var i2))
     {
       Console.WriteLine($"TryParse: {i2}");
     }

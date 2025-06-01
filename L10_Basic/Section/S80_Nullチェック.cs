@@ -1,10 +1,10 @@
 namespace L10_Basic.Section;
 
-internal static class S85_null
+internal static class S80_Nullチェック
 {
   internal static void Run()
   {
-    Console.WriteLine("\n～～null～～");
+    Console.WriteLine("\n～～Nullチェック～～");
 
     // nullチェック
     string? nullable = null;

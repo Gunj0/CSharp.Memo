@@ -10,32 +10,29 @@ internal static class S60_File
     Console.WriteLine("\n～～File～～");
 
     // ファイル出力
-    var outputFilePath = @"IOSample.txt";
     using (var sw = new StreamWriter(
-      outputFilePath, // 絶対パスでも相対パスでも可
+      "IOSample.txt", // 絶対パスでも相対パスでも可
       true,           // trueは追記、falseは上書き
       Encoding.GetEncoding("UTF-8")
       ))
     {
       sw.WriteLine($"{DateTime.Now},晴れ");
     }
-    Console.WriteLine($"{outputFilePath}: ファイル出力完了");
+    Console.WriteLine($"ファイル出力");
 
-    // ファイル読み込み
-    var inputFilePath = @"IOSample.txt";
-    // 存在チェック
-    if (!File.Exists(inputFilePath)) return;
+    // ファイル存在チェック
+    if (!File.Exists("IOSample.txt")) return;
+    Console.WriteLine($"ファイル存在チェック");
 
-    // 一行ずつ読み込み
-    string[] lines = File.ReadAllLines(
-      inputFilePath, // 絶対パスでも相対パスでも可
+    // ReadAllLines(全ての行を配列に読み込んでから処理する)
+    var _dtos = new List<OutputFileDto>();
+    var lines = File.ReadAllLines(
+      "IOSample.txt",
       Encoding.GetEncoding("UTF-8")
       );
-    // BindingListは、DataGridViewをリアルタイム更新できるList
-    var _dtos = new BindingList<OutputFileDto>();
     foreach (var line in lines)
     {
-      string[] row = line.Split(',');
+      var row = line.Split(',');
       var dto = new OutputFileDto(
         DateTime.Parse(row[0]),
         row[1]
@@ -44,7 +41,27 @@ internal static class S60_File
     }
     foreach (var dto in _dtos)
     {
-      Console.WriteLine($"{dto.Id}: {dto.Time}: {dto.Weather}");
+      Console.WriteLine($"ReadAllLines: {dto.Id}: {dto.Time}: {dto.Weather}");
+    }
+
+    // StreamReader(一行ずつ読み込みつつ処理する)
+    using (var sr = new StreamReader(
+      "IOSample.txt",
+      Encoding.GetEncoding("UTF-8")
+      ))
+    {
+      var line = sr.ReadLine();
+      while (line != null)
+      {
+        var row = line.Split(',');
+        var dto = new OutputFileDto(
+          DateTime.Parse(row[0]),
+          row[1]
+          );
+        _dtos.Add(dto);
+        Console.WriteLine($"StreamReader: {dto.Id}: {dto.Time}: {dto.Weather}");
+        line = sr.ReadLine();
+      }
     }
   }
 }
