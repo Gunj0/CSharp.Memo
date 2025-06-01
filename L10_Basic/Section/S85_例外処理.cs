@@ -29,3 +29,12 @@ internal static class S85_例外処理
     }
   }
 }
+
+// 独自例外
+public sealed class CsvReadException : Exception
+{
+  public CsvReadException(Exception e) : base("読み込み失敗")
+  {
+    Console.WriteLine(e);
+  }
+}

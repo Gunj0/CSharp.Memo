@@ -1,13 +1,12 @@
-// VSCodeのデバッグサイドバーで「構成の追加」で自動生成
+// VSCode「実行とデバッグ」サイドバーの「構成の追加」で自動生成
 {
   "version": "0.2.0",
   "configurations": [
     {
-      // .NET: 実行可能ファイルの起動（コンソール）
-      "name": "CSharp.Memo.L10_Basic",
-      "type": "coreclr",
-      "request": "launch",
-      "preLaunchTask": "build_L10_Basic",
+      "name": "CSharp.Memo.L10_Basic", // サイドバーで表示される名前
+      "type": "coreclr", // .NET: 実行可能ファイルの起動（コンソール）
+      "request": "launch", // 実行時に起動する
+      "preLaunchTask": "build_L10_Basic", // ビルドタスクの実行
       "program": "${workspaceFolder}/L10_Basic/bin/Debug/net9.0/L10_Basic.dll",
       "args": [],
       "cwd": "${workspaceFolder}/L10_Basic",

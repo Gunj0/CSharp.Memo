@@ -10,8 +10,8 @@
       "args": [
         "build",
         "${workspaceFolder}/L10_Basic/L10_Basic.csproj",
-        "/property:GenerateFullPaths=true",
-        "/consoleloggerparameters:NoSummary"
+        "/property:GenerateFullPaths=true", // フルパスを生成
+        "/consoleloggerparameters:NoSummary" // コンソール出力のサマリーを非表示
       ],
       "problemMatcher": ["$msCompile"]
     },
