@@ -16,12 +16,12 @@
       "problemMatcher": ["$msCompile"]
     },
     {
-      "label": "build_L20_Classes",
+      "label": "build_L20_Class",
       "command": "dotnet",
       "type": "process",
       "args": [
         "build",
-        "${workspaceFolder}/L20_Classes/L20_Classes.csproj",
+        "${workspaceFolder}/L20_Class/L20_Class.csproj",
         "/property:GenerateFullPaths=true",
         "/consoleloggerparameters:NoSummary"
       ],

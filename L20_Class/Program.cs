@@ -1,6 +1,6 @@
-﻿using L20_Classes.Section;
+﻿using L20_Class.Section;
 
-Console.WriteLine("～～〜〜Classes〜〜～～");
+Console.WriteLine("～～〜〜Class〜〜～～");
 
 new S00_クラス().Run();
 new S05_コンストラクタ().Run();

@@ -15,8 +15,8 @@
 ## 模式図
 
 ```text
-ソリューション
-└プロジェクト1
-└プロジェクト2
-└プロジェクト3
+XXPro
+└ XXPro.UI
+└ XXPro.Domain
+└ XXPro.Database
 ```

@@ -1,12 +1,10 @@
-namespace L20_Classes.Section;
+namespace L20_Class.Section;
 
 internal class S30_継承
 {
   internal void Run()
   {
     Console.WriteLine("\n～～継承～～");
-
-    // 継承
 
     // 基底クラス
     var parent = new ParentClass();
@@ -24,7 +22,7 @@ internal class ParentClass
   // 仮想メソッド
   public virtual void Method1()
   {
-    Console.WriteLine("基底クラス");
+    Console.WriteLine("基底クラス, 仮想メソッド");
   }
 }
 

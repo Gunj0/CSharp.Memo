@@ -15,13 +15,13 @@
       "console": "internalConsole"
     },
     {
-      "name": "CSharp.Memo.L20_Classes",
+      "name": "CSharp.Memo.L20_Class",
       "type": "coreclr",
       "request": "launch",
-      "preLaunchTask": "build_L20_Classes",
-      "program": "${workspaceFolder}/L20_Classes/bin/Debug/net9.0/L20_Classes.dll",
+      "preLaunchTask": "build_L20_Class",
+      "program": "${workspaceFolder}/L20_Class/bin/Debug/net9.0/L20_Class.dll",
       "args": [],
-      "cwd": "${workspaceFolder}/L20_Classes",
+      "cwd": "${workspaceFolder}/L20_Class",
       "stopAtEntry": false,
       "console": "internalConsole"
     },

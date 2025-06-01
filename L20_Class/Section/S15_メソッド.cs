@@ -1,4 +1,4 @@
-namespace L20_Classes.Section;
+namespace L20_Class.Section;
 
 internal class S15_メソッド
 {

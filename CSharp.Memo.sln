@@ -5,7 +5,7 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "L10_Basic", "L10_Basic\L10_Basic.csproj", "{54FEF2E3-C8D7-4EC9-82F1-1C2E01A34126}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "L20_Classes", "L20_Classes\L20_Classes.csproj", "{56FEF4CC-D5DF-4840-8980-7945D9AAA405}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "L20_Class", "L20_Class\L20_Class.csproj", "{56FEF4CC-D5DF-4840-8980-7945D9AAA405}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "L30_Lambda", "L30_Lambda\L30_Lambda.csproj", "{C4DB96EA-9CF7-40B7-8286-D5AA6AA1E8C1}"
 EndProject
