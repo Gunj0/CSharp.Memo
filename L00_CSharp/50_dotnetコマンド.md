@@ -52,9 +52,10 @@ dotnet sln list
 
 ## アプリ起動
 
-- `dotnet watch`
-  - プロジェクトフォルダ配下でアプリ起動
-  - Hot reload 状態
+- `dotnet watch --launch-profile http`
+  - プロジェクトフォルダ配下で Hot reload でアプリ起動
+  - Properties/launchSettings.json の設定で起動する
+  - profile 指定しないと一番上のキー設定で起動する
 
 ## デバッグ起動
 
