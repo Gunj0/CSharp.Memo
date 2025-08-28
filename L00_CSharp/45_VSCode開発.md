@@ -3,19 +3,39 @@
 ## 拡張機能
 
 - 必須
-  - C# Dev Kit (Microsoft)
+  - [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit)
     - C#開発の基本ツール, デバッグ等
-  - C# (Microsoft)
-    - C# の基本言語サポート(C# Dev Kit に付随してくる)
-  - .NET Install Tool (Microsoft)
-    - SDK と Runtime をインストール/管理する(C# Dev Kit に付随してくる)
-  - IntelliCode for C# Dev Kit (Microsoft)
-    - C#コード補完ツール
+  - [C#](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)
+    - C# の基本言語サポート(C# Dev Kit に付随)
+  - [.NET Install Tool](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.vscode-dotnet-runtime)
+    - SDK と Runtime をインストール/管理する(C# Dev Kit に付随)
+  - [IntelliCode for C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.vscodeintellicode-csharp)
+    - コード補完
 - 任意
-  - C# Extensions (JosKreativ)
-    - 右クリックでクラスファイル等を追加できる
-  - NuGet Gallery (pcislo)
-    - 統合ターミナルで NuGet が GUI 操作できる
+  - C#全般
+    - [C# Extensions](https://marketplace.visualstudio.com/items?itemName=kreativ-software.csharpextensions)
+      - 右クリックで Class ファイル等を追加できる
+    - NuGet Gallery (pcislo)
+      - 統合ターミナルで NuGet が GUI 操作できる
+    - [C# XML Documentation Comments](https://marketplace.visualstudio.com/items?itemName=k--kato.docomment)
+      - XML コメントの自動補完
+  - ASP.NET Core
+    - [ASP.NET Core Snippets](https://marketplace.visualstudio.com/items?itemName=rahulsahay.Csharp-ASPNETCore)
+      - スニペット群
+    - [ASP.NET Core Switcher](https://marketplace.visualstudio.com/items?itemName=adrianwilczynski.asp-net-core-switcher)
+      - コントローラ/ビュー間の行き来を簡単化
+  - .NET MAUI
+    - [.NET MAUI](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.dotnet-maui)
+      - .NET MAUI の開発キット
+  - resx
+    - [ResXpress](https://marketplace.visualstudio.com/items?itemName=H4kan.resXpress)
+      - resx ファイルの編集
+
+## 開発メモ
+
+- ソリューションエクスプローラー
+  - 「エクスプローラー」サイドバーの下にある
+  - Visual Studio ライクな論理階層構造で表示される
 
 ## デバッグ
 

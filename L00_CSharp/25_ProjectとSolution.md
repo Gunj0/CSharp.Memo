@@ -3,20 +3,20 @@
 ## Project
 
 - 機能単位にファイルをまとめたもの
-- UI、Biz 等の名前をつける
-- 例: XXPro.UI
+- 基本的には会社名.製品名.機能名をつける
+  - 例: Company.Product.UI.csproj
 
 ## Solution
 
 - プロジェクトをまとめたもの
-- 基本的には製品名をつける
-- 例: XXPro
+- 基本的には会社名.製品名をつける
+  - 例: Company.Product.sln
 
-## 模式図
+## 階層構造
 
 ```text
-XXPro
-└ XXPro.UI
-└ XXPro.Domain
-└ XXPro.Database
+Company.Product.sln
+└ Company.Product.UI.csproj
+└ Company.Product.Domain.csproj
+└ Company.Product.Database.csproj
 ```

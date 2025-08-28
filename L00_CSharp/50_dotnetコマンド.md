@@ -3,13 +3,31 @@
 ## ソリューションファイル 作成
 
 ```bash
-dotnet new sln
+dotnet new sln -o CSharp.Memo
 ```
 
-## コンソールプロジェクト作成
+## テンプレート確認
+
+```bash
+dotnet new list
+```
+
+- [テンプレート一覧](https://learn.microsoft.com/ja-jp/dotnet/core/tools/dotnet-new)
+  - sln: ソリューション
+  - gitignore: .gitignore
+  - console: コンソールアプリ
+  - classlib: クラスライブラリ
+  - mvc: ASP.NET Core Web MVC アプリ
+  - webapi: ASP.NET Core Web API
+  - mstest: MSTest
+  - webconfig: Web 構成
+
+## プロジェクトテンプレート作成
 
 ```bash
 dotnet new console -o ./L00_CSharp
+# -o で出力先(プロジェクト名)指定
+# --no-https でHTTPS無効化
 ```
 
 ## プロジェクトをソリューションに追加・削除・リスト表示
@@ -31,31 +49,28 @@ dotnet sln list
 
 - `dotnet build`
   - bin と obj が作られる
+
+## アプリ起動
+
+- `dotnet watch`
+  - プロジェクトフォルダ配下でアプリ起動
+  - Hot reload 状態
+
+## デバッグ起動
+
 - `dotnet run`
   - ターミナルで実行結果が返る
   - もしくは F5
 
-## gitignore 作成
+## HTTPS 有効化
 
 ```bash
-dotnet new gitignore
+# 自己署名証明書の発行 https://learn.microsoft.com/ja-jp/dotnet/core/tools/dotnet-dev-certs
+dotnet dev-certs https --trust
+
+# https起動
+dotnet watch --launch-profile https
 ```
-
-## テンプレート確認
-
-```bash
-dotnet new list
-```
-
-- [テンプレート一覧](https://learn.microsoft.com/ja-jp/dotnet/core/tools/dotnet-new)
-  - sln: ソリューション
-  - gitignore: .gitignore
-  - console: コンソールアプリ
-  - classlib: クラスライブラリ
-  - mvc: ASP.NET Core Web MVC
-  - webapi: ASP.NET Core Web API
-  - mstest: MSTest
-  - webconfig: Web 構成
 
 ## .NET バージョン確認
 
