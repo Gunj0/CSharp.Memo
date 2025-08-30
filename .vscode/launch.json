@@ -34,6 +34,26 @@
       "cwd": "${workspaceFolder}/L30_Lambda",
       "stopAtEntry": false,
       "console": "internalConsole"
+    },
+    {
+      "name": "CSharp.Memo.L70_Mvc",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build_L70_MVC",
+      "program": "${workspaceFolder}/L70_MVC/bin/Debug/net9.0/L70_MVC.dll",
+      "args": [],
+      "cwd": "${workspaceFolder}/L70_MVC",
+      "stopAtEntry": false,
+      "serverReadyAction": {
+        "action": "openExternally",
+        "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
+      },
+      "env": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "sourceFileMap": {
+        "/Views": "${workspaceFolder}/Views"
+      }
     }
   ]
 }

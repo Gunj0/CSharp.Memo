@@ -1,12 +1,20 @@
+using L70_Mvc.Models.Database;
+using Microsoft.EntityFrameworkCore;
+
 // WebApplicationBuilderのインスタンスを生成する
 // 引数でアプリ名や環境名を指定できる
 var builder = WebApplication.CreateBuilder(args);
 
-// MVCのサービスを追加する
-// AddControllersWithViewsは、コントローラとビューの両方をサポートする
-// AddControllersは、コントローラのみをサポートする
-// AddRazorPagesは、Razor Pagesをサポートする
+// MVCのサービスを追加する: コントローラとビューのサポート追加
 builder.Services.AddControllersWithViews();
+// AddControllers: コントローラのみのサポート追加
+// AddRazorPages: Razor Pagesのサポート追加
+
+builder.Services.AddDbContext<SampleDbContext>(options =>
+    options.UseSqlite(
+        builder.Configuration.GetConnectionString("DefaultConnection")
+    )
+);
 
 // WebApplicationのインスタンスを生成する
 var app = builder.Build();

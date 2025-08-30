@@ -38,6 +38,18 @@
         "/consoleloggerparameters:NoSummary"
       ],
       "problemMatcher": ["$msCompile"]
+    },
+    {
+      "label": "build_L70_MVC",
+      "command": "dotnet",
+      "type": "process",
+      "args": [
+        "build",
+        "${workspaceFolder}/L70_MVC/L70_MVC.csproj",
+        "/property:GenerateFullPaths=true",
+        "/consoleloggerparameters:NoSummary"
+      ],
+      "problemMatcher": ["$msCompile"]
     }
   ]
 }

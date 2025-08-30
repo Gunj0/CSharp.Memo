@@ -1,0 +1,30 @@
+﻿@* Controllerから渡されたモデルは@modelで受け取る *@
+@model IEnumerable<L70_Mvc.Models.Entities.Book>
+
+@{
+    ViewData["Title"] = "SampleDB Index";
+}
+
+<h1>SampleDB Index</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Author</th>
+            <th>PublishedYear</th>
+        </tr>
+    </thead>
+    <tbody>
+        @* @modelはModelで受け取る *@
+        @foreach (var book in Model)
+        {
+            <tr>
+                <td>@book.BookId</td>
+                <td>@book.Title</td>
+                <td>@book.Author</td>
+                <td>@book.PublishedDate</td>
+            </tr>
+        }
+    </tbody>
+</table>

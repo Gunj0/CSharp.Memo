@@ -1,28 +1,34 @@
 using System.Diagnostics;
-using Microsoft.AspNetCore.Mvc;
 using L70_Mvc.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace L70_Mvc.Controllers;
 
-public class HomeController : Controller
+/// <summary>
+/// HomeController
+/// </summary>
+/// <param name="logger">ロガー</param>
+public class HomeController(ILogger<HomeController> logger) : Controller
 {
-    private readonly ILogger<HomeController> _logger;
+    /// <summary>
+    /// ロガー
+    /// </summary>
+    private readonly ILogger<HomeController> _logger = logger;
 
-    public HomeController(ILogger<HomeController> logger)
-    {
-        _logger = logger;
-    }
-
+    /// <summary>
+    /// Index
+    /// </summary>
+    /// <returns>View</returns>
     public IActionResult Index()
     {
+        _logger.LogInformation("Index action called.");
         return View();
     }
 
-    public IActionResult Privacy()
-    {
-        return View();
-    }
-
+    /// <summary>
+    /// TODO: なに？
+    /// </summary>
+    /// <returns></returns>
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {

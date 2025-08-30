@@ -14,12 +14,12 @@
 - `dotnet tool update -g dotnet-ef`
   - アップデート
 
-## 任意
+## 任意インストール
 
 - `dotnet tool install --global dotnet-aspnet-codegenerator`
   - スキャフォールディング機能のコマンドラインツール
 
-## ライブラリ
+## 基本ライブラリ
 
 - [Microsoft.EntityFrameworkCore.Design](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Design)
   - スキャフォールディング機能を実行するためのツール群
@@ -28,16 +28,23 @@
 - [Microsoft.VisualStudio.Web.CodeGeneration.Design](https://www.nuget.org/packages/Microsoft.VisualStudio.Web.CodeGeneration.Design)
   - ASP.NET Core のコード生成のためのライブラリ
 
-## DB ごと
+## DB ごとのライブラリ
 
 - [Microsoft.EntityFrameworkCore.SqlServer](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.SqlServer)
   - SQL Server
 - [Microsoft.EntityFrameworkCore.Sqlite](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Sqlite)
   - SQLite
+- [Pomelo.EntityFrameworkCore.MySql](https://www.nuget.org/packages/Pomelo.EntityFrameworkCore.MySql)
+  - MySQL
+- [Npgsql.EntityFrameworkCore.PostgreSQL](https://www.nuget.org/packages/Npgsql.EntityFrameworkCore.PostgreSQL)
+  - PostgreSQL
 
-## コマンド
+## マイグレーションファイル作成
 
--
+- `dotnet ef migrations add InitialMigration`
+  - マイグレーションファイルの作成
+
+## DB 更新
 
 - `dotnet ef database update`
   - マイグレーションファイルの内容で DB 更新する

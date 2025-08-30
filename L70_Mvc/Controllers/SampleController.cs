@@ -8,7 +8,7 @@ namespace L70_Mvc.Controllers;
 public class SampleController : Controller
 {
   /// <summary>
-  /// Content (~/Sample) 
+  /// Content (~/Sample)
   /// </summary>
   /// <returns>テキスト</returns>
   public IActionResult Index()
