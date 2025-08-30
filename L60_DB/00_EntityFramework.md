@@ -5,28 +5,21 @@
   - LINQ 使用可能
   - スキーママイグレーション可能
 
-## インストール
+## dotnet-ef コマンドツール
 
 - `dotnet tool install --global dotnet-ef`
   - EntityFramework のインストール
 - `dotnet ef --version`
-  - バージョン確認
+  - バージョン表示
 - `dotnet tool update -g dotnet-ef`
   - アップデート
-
-## 任意インストール
-
-- `dotnet tool install --global dotnet-aspnet-codegenerator`
-  - スキャフォールディング機能のコマンドラインツール
+- `dotnet tool list --global`
+  - インストールされている tool リスト表示
 
 ## 基本ライブラリ
 
-- [Microsoft.EntityFrameworkCore.Design](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Design)
-  - スキャフォールディング機能を実行するためのツール群
 - [Microsoft.EntityFrameworkCore.Tools](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Tools)
   - EF Core 関連のコマンドを実行するためのツール群
-- [Microsoft.VisualStudio.Web.CodeGeneration.Design](https://www.nuget.org/packages/Microsoft.VisualStudio.Web.CodeGeneration.Design)
-  - ASP.NET Core のコード生成のためのライブラリ
 
 ## DB ごとのライブラリ
 
